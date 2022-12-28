@@ -1,0 +1,139 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-size:18px;
+}
+
+nav {
+    box-shadow:4px 4px 4px grey;
+}
+
+#nav-inner {
+    margin:auto;
+    width:90vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#nav-inner p {
+    font-weight:bold;
+    font-size:1.85rem;
+    color:tomato
+}
+
+#nav-btns button {
+    padding:0.5rem 1.75rem;
+    border-radius:50px;
+    font-size:1rem;
+}
+
+#nav-btns #signup {
+    background-color:tomato;
+    color:#eee;
+    border:none;
+    margin-right:1.5rem;
+}
+
+#nav-btns #signup:hover {
+    background-color:transparent;
+    color:tomato;
+    border:1px solid tomato;
+}
+
+#nav-btns #login {
+    color:tomato;
+    border:1px solid tomato;
+}
+
+#nav-btns #login:hover {
+    color:#eee;
+    background-color:tomato;
+    border:none;
+}
+
+#nav-btns a {
+    text-decoration:none;
+    padding:0.5rem 1.75rem;
+    border-radius:50px;
+    font-size:1.15rem;
+    background-color:tomato;
+    color:#eee;
+    border:none;
+}
+
+#nav-btns a:hover {
+    background-color:transparent;
+    color:tomato;
+    border:1px solid tomato;
+}
+
+#forms-container {
+    margin-top:4rem;
+}
+
+.form-div {
+    margin:auto;
+    width:40vw;
+    box-shadow:0px 0px 8px grey;
+    margin-bottom:2rem;
+    padding:2.5rem 4rem;
+}
+
+.form-div form {
+    display:flex;
+    flex-direction:column;
+}
+
+.form-div form input {
+    padding:1rem 0.75rem;
+    margin-bottom:1.5rem;
+}
+
+.form-div form button {
+    margin-bottom:1.25rem;
+    margin-top:1rem;
+    border-radius:50px;
+    padding-top:0.75rem;
+    padding-bottom:0.75rem;
+    font-size:1.25rem;
+    background-color:tomato;
+    color:#eee;
+    border:none;
+}
+
+.form-div form button:hover {
+    background-color:transparent;
+    color:tomato;
+    border:1px solid tomato;
+}
+
+.toggle-link {
+    color:tomato;
+    font-size:1.25rem;
+    cursor:pointer;
+}
+
+#signupDiv {
+    display:none;
+}
+
+#loginDiv {
+    display:block;
+}
+
+#message {
+    color:red;
+    text-align:center;
+    margin-top:3rem;
+    font-weight:bold;
+    font-size:1.25rem;
+}
+
+#welcome {
+    margin-top:10rem;
+}

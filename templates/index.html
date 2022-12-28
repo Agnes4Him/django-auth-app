@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}" />
+    <title>Django Login-Signup App</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <nav>
+        <div id="nav-inner">
+            <p>Brand</p>
+            <div id="nav-btns">
+                <a id="logout" href="/authapp/logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    {% else %}
+    <nav>
+        <div id="nav-inner">
+            <p>Brand</p>
+            <div id="nav-btns">
+                <button id="signup">Signup</button>
+                <button id="login">Login</button>
+            </div>
+        </div>
+    </nav>
+    {% endif %}
+    {% for message in messages %}
+    <p id="message">{{message}}</p>
+    {% endfor %}
+    <section id="forms-container">
+        <div class="form-div" id="loginDiv">
+            <form method="POST" action="/authapp/home">
+                {% csrf_token %}
+                <input type="email" placeholder="Enter Your Email Address" name="email" />
+                <input type="password" placeholder="Enter Your Password" name="password" />
+                <input type="hidden" name="status" value="login" />
+                <button>Submit</button>
+            </form>
+            <p>Yet to create an account? <span class="toggle-link" id="signup-toggle">Sign up</span></p>
+        </div>
+        <div class="form-div" id="signupDiv">
+            <form method="POST" action="/authapp/home">
+                {% csrf_token %}
+                <input type="email" placeholder="Enter Your Email Address" name="email" />
+                <input type="password" placeholder="Enter Your Password" name="password" />
+                <input type="password" placeholder="Enter Repeat Password" name="repeat_password" />
+                <input type="hidden" name="status" value="signup" />
+                <button>Submit</button>
+            </form>
+            <p>Already have an account? <span class="toggle-link" id="login-toggle">Login</span></p>
+        </div>
+    </section>
+    <script src="{% static '/index.js' %}" type="text/javascript"></script>
+</body>
+</html>
