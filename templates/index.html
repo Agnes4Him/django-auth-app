@@ -36,7 +36,7 @@
         <div class="form-div" id="loginDiv">
             <form method="POST" action="/authapp/home">
                 {% csrf_token %}
-                <input type="email" placeholder="Enter Your Email Address" name="email" />
+                <input type="text" placeholder="Enter Your User Name" name="username" />
                 <input type="password" placeholder="Enter Your Password" name="password" />
                 <input type="hidden" name="status" value="login" />
                 <button>Submit</button>
@@ -46,6 +46,7 @@
         <div class="form-div" id="signupDiv">
             <form method="POST" action="/authapp/home">
                 {% csrf_token %}
+                <input type="text" placeholder="Enter Your User Name" name="username" />
                 <input type="email" placeholder="Enter Your Email Address" name="email" />
                 <input type="password" placeholder="Enter Your Password" name="password" />
                 <input type="password" placeholder="Enter Repeat Password" name="repeat_password" />
